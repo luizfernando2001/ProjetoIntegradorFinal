@@ -1,4 +1,7 @@
-<div class="content-wrapper">
+
+<!-- css na pasta app\painelAdm\dist\css\admcss.css -->
+
+<div class="content-wrapper ">
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
@@ -6,26 +9,26 @@
                   <div class="med  text-center ">
         <div class="items">
             <div class="icon-wrapper">
-                <i class="fa fa-file-text-o"></i>
+                <i class="fa icon-profile"></i>
             </div>
             <div class="project-name">
-                <p>POSTS</p>
+                <p>MARCAR CONSULTA</p>
             </div>
         </div>
         <div class="items">
             <div class="icon-wrapper">
-                <i class="fa fa-th-list"></i>
+                <i class="fa icon-user"></i>
             </div>
             <div class="project-name">
-                <p>PROJECTS</p>
+                <p>CADASTRO DE MEDICOS</p>
             </div>
         </div>
         <div class="items">
             <div class="icon-wrapper">
-                <i class="fa fa-th-large"></i>
+                <i class="fa icon-addchart"></i>
             </div>
             <div class="project-name">
-                <p>COLLECTIONS</p>
+                <p>CADASTRO DE ESPECIALIADADES</p>
             </div>
         </div>
     </div>

@@ -41,6 +41,8 @@
 <script src="app/paineladm/plugins/summernote/summernote-bs4.min.js"></script>
 <!-- overlayScrollbars -->
 <script src="app/paineladm/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- calendario java scrips -->
+<script src="app\painelAdm\dist\js\pages\calendariojava.js"></script>
 
 <!-- DataTables  & Plugins -->
 <script src="app/paineladm/plugins/datatables/jquery.dataTables.min.js"></script>
@@ -55,7 +57,7 @@
 <script src="app/paineladm/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="app/paineladm/plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="app/paineladm/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-
+<script src="app/painelAdm/dist/js/mascara.js"></script>
 <!-- AdminLTE App -->
 <script src="app/paineladm/dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
