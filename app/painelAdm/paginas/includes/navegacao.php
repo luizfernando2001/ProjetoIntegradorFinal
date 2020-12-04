@@ -1,0 +1,140 @@
+<div class="wrapper">
+
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- links da navbar topo -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="app/painelAdm/index3.php" class="nav-link">inicial</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contato</a>
+      </li>
+    </ul>
+
+    <!-- formulario de pesquisa topo -->
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="pesquisar" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- mantem tudo no lugar -->
+    <ul class="navbar-nav ml-auto">
+
+       
+<!-- icones da navbar topo -->
+
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-1">
+    <!-- Brand Logo -->
+
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-2 pb-2 py-2 mb-2 d-flex">
+        <div class="image">
+          <img src="app/painelAdm/dist/img/avatar5.png" class="img-circle elevation-1" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">ClinicaLegal</a>
+
+        </div>
+      </div>
+      <!-- barra de pesquisa -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="?pg=agenda" class="nav-link">
+              <i class="far icon-contacts nav-icon"></i>
+              <p>Agenda</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="?pg=pacientes" class="nav-link">
+              <i class="far icon-person_add_alt_1 nav-icon"></i>
+              <p>Pacientes</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="?pg=profissionais" class="nav-link">
+              <i class="far icon-groups nav-icon"></i>
+              <p>Profissionais</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="?pg=marcarconsulta" class="nav-link">
+              <i class="far icon-profile nav-icon"></i>
+              <p>Marca Consulta</p>
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="?pg=cadastrodemedicos" class="nav-link">
+              <i class="far icon-user nav-icon"></i>
+              <p>Cadastro de Medicos</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="?pg=cadastrodeespecialidades" class="nav-link">
+              <i class="far icon-user nav-icon"></i>
+              <p>Cadastra especialidades</p>
+            </a>
+          </li>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
