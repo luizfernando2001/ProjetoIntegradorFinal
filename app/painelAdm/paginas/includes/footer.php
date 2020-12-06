@@ -41,8 +41,12 @@
 <script src="app/paineladm/plugins/summernote/summernote-bs4.min.js"></script>
 <!-- overlayScrollbars -->
 <script src="app/paineladm/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- calendario java scrips -->
-<script src="app\painelAdm\dist\js\pages\calendariojava.js"></script>
+
+
+<!-- mascara de formularios -->
+<script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>        
+
+
 
 <!-- DataTables  & Plugins -->
 <script src="app/paineladm/plugins/datatables/jquery.dataTables.min.js"></script>
