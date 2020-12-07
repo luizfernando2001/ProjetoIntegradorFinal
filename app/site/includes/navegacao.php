@@ -34,7 +34,7 @@
         } else { ?>
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link btn btn-outline-primary" href="cpanel.php?pg=login">Administração</a>
+              <a class="nav-link btn btn-outline-primary" href="cpanel.php">Administração</a>
             </li>
           </ul>
         <?php
