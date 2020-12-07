@@ -3,3 +3,16 @@
 body{
     background-color: cornflowerblue;
 }
+
+#carouselExampleControls{
+ 
+    width: 900px;
+}
+
+ul{
+    list-style: none;
+}
+
+.img-fluid{
+    height: 250px;
+}

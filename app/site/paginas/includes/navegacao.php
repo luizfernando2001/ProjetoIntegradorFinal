@@ -44,18 +44,20 @@
     <div class="carousel-item active">
       <div class="row">
      <!-- card slide aq  -->
-     <div class="card col ml-5" style="width: 18rem;">
+     <div class="card col ml-5" style="height: 300px;">
   <div class="card-body">
     <h5 class="card-title">Cardiologista</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>
+
 <div class="card col mx-5" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">Psiquiatra</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>
+
 <div class="card col mr-5" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">Psicólogo</h5>
@@ -64,6 +66,8 @@
 </div>
 </div>
     </div>
+
+    
     <div class="carousel-item">
   <!-- card slide aq  -->
   <div class="row">
@@ -106,6 +110,4 @@
 </div>
    
 <br>
-
-
-
+ <!-- informações de consulta  -->

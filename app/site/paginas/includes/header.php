@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="app/assets/img/footerphoto.gif">
     <!-- Icomoon -->
-    <link rel="stylesheet" href="app/assets/img/icons/icomoon.css">
+    <link rel="stylesheet" href="app/assets/icon/icon.css">
     <!-- Meu CSS -->
     <link rel="stylesheet" href="app/assets/css/projetofinalcss.css">
 </head>
