@@ -1,0 +1,24 @@
+*********************************************************************************************************************
+*                                           INSTRUÇÕES PARA USO DESTA PASTA!!                                       *
+*                                                                                                                   *
+*   1. ESTA PASTA É DESTINADA A ANEXAR OS ARQUIVOS QUE NÃO FAZEM PARTE DO SISTEMA.                                  *
+*                                                                                                                   *
+*   2. SEMPRE QUE FINALIZAR A AULA, ADICIONAR OS ARQUIVOS AQUI ANEXANDO COM DATA SEM EXCLUIR AS VERSÕES ANTERIORES  *
+*   POIS ESTAS SERVIRÃO COMO UMA ESPECIE DE EVOLUÇÃO DO ARQUIVO E TAMBÉM DE BACKUP.                                 *
+*                                                                                                                   *
+*   2.1 POR EXEMPLO: SE HOUVER UM ARQUIVO AQUI E POR ALGUM MOTIVO, PRECISAR DE ALTERAÇÃO, ENTÃO MODIFICA O ARQUIVO  *
+*   E POSTERIORMENTE ADICIONA A NOVA VERSÃO NESTA PASTA (A SUGESTÃO É QUE ADICIONE O NOME+DATA DE MODIFICAÇÃO)      *
+*   EX.: ProjetoDocumentado.pdf --> edita --> coloca um novo arquivo com o nome ProjetoDocumentado-03-12.pdf        *
+*                                                                                                                   *
+*   3. PARA COLOCAR O ARQUIVO AQUI É SÓ ARRASTAR DO PC PRO VISUAL STUDIO CODE PARA A PASTA DE PLANEJAMENTO          *
+*                                                                                                                   *
+*   4. APÓS ISSO, É OBRIGATÓRIO O COMMIT E PULL REQUEST. NÃO É SÓ OS ARQUIVOS DO SITE QUE TÊM QUE FAZER O COMMIT,   *
+*   OS ARQUIVOS ALTERADOS AQUI TAMBÉM PRECISAM SER ATUALIZADOS PARA TODO MUNDO.                                     *
+*                                                                                                                   *
+*   5. EXEMPLOS DE ARQUIVOS A SEREM COLOCADOS AQUI:                                                                 *
+*    - WIREFRAMES                                                                                                   *
+*    - LAYOUTS                                                                                                      *
+*    - DOCUMENTOS                                                                                                   *
+*    - LINKS DE SITES (CRIAR UM .txt COMO ESTE PARA INSERIR OS LINKS)                                               *
+*                                                                                                                   *
+*********************************************************************************************************************
