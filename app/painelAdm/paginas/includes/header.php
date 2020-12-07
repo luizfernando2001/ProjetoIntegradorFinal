@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="app/paineladm/plugins/jqvmap/jqvmap.min.css">
   <link rel="stylesheet" href="app\assets\icon\icon.css">
 
+  
   <!-- tabela de dados -->
   <link rel="stylesheet" href="app/paineladm/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="app/paineladm/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
