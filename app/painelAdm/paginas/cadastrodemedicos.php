@@ -13,19 +13,19 @@
             <div class="col-1 mt-4"> </div>
                 <div class="col-3 mt-4"> <img src="app/painelAdm/dist/img/med.png" alt=""> </div>
                 <div class="col-6  mb-3">
-                    <form action="" method="POST">
+                    <form action="?pg=cadastrodemedicos" method="POST">
                         <div class="form-group">
                             <label for="inputAddress">Nome Completo </label>
-                            <input class="form-control" type="text" name="field-name" placeholder="Nome do médico">
+                            <input class="form-control" type="text" name="nomemedico" placeholder="Nome do médico">
                         </div>
                         <div class="row">
                             <div class="form-group  col-md-6">
                                 <label for="inputEmail4">RG</label>
-                                <input class="rg form-control" type="text" name="rg"  required="required" name="numbers" pattern="[0-9]+$" placeholder="9.858.659" id="inputEmail4">
+                                <input class="rg form-control" type="text" name="rg"   name="numbers" placeholder="9.858.659" id="inputEmail4">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">CPF</label>
-                                <input type="text" required="required"  name="cpf" required="required" class="form-control cpf" placeholder="133.151.154-56" id="inputPassword4">
+                                <input type="text"  name="cpf" class="form-control cpf" placeholder="133.151.154-56" id="inputPassword4">
                             </div>
                             
                         </div>

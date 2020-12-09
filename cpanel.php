@@ -1,5 +1,5 @@
 <?php
-
+include_once "app/painelAdm/helpers/helperAdm.php";
 
 
 
@@ -18,7 +18,7 @@ if ($cpanel) {
     switch ($_GET["pg"]) {
 
 
-       
+
 
         case 'login':
             include_once "app/site/login.php";
@@ -33,11 +33,14 @@ if ($cpanel) {
 
 
             break;
+
         case 'cadastrodemedicos':
             include_once "app/painelAdm/paginas/includes/header.php";
             include_once "app/painelAdm/paginas/includes/navegacao.php";
-            include_once "app/painelAdm/paginas/cadastrodemedicos.php";
+
             inserirprofi();
+
+            // include_once "app/painelAdm/paginas/cadastrodemedicos.php";
             include_once "app/painelAdm/paginas/includes/footer.php";
 
 
@@ -55,6 +58,7 @@ if ($cpanel) {
         case 'pacientes':
             include_once "app/painelAdm/paginas/includes/header.php";
             include_once "app/painelAdm/paginas/includes/navegacao.php";
+             
             include_once "app/painelAdm/paginas/pacientes.php";
 
             include_once "app/painelAdm/paginas/includes/footer.php";
@@ -64,7 +68,8 @@ if ($cpanel) {
         case 'marcarconsulta':
             include_once "app/painelAdm/paginas/includes/header.php";
             include_once "app/painelAdm/paginas/includes/navegacao.php";
-            include_once "app/painelAdm/paginas/marcarconsulta.php";
+            inserirpaciente();
+            // include_once "app/painelAdm/paginas/marcarconsulta.php";
 
             include_once "app/painelAdm/paginas/includes/footer.php";
 
@@ -79,6 +84,12 @@ if ($cpanel) {
             include_once "app/painelAdm/paginas/includes/footer.php";
 
 
+            break;
+
+        case 'sair';
+            session_destroy();
+            header('location' . $_SERVER['PHP_SELF']);
+            header('Refresh:0');
             break;
 
         case 'planodesaude':
