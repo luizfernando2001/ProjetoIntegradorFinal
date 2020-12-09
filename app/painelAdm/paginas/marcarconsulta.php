@@ -10,39 +10,53 @@
 
 
             <div class="row">
-            <div class="col-1 mt-4"> </div>
+                <div class="col-1 mt-4"> </div>
                 <div class="col-3 mt-4"> <img src="app/painelAdm/dist/img/medd.png" alt=""> </div>
                 <div class="col-6  mb-3">
-                    <form action="" method="POST">
+                    <!-- formulario -->
+                    <form action="?pg=cadastrodemedicos" method="POST">
                         <div class="form-group">
-                            <label for="inputAddress">Nome Completo </label>
-                            <input class="form-control" type="text" name="field-name" data-mask="00/00/0000" placeholder="Nome Do Medico Aqui">
+                            <label for="inputAddress">Nome Completo do Paciente </label>
+                            <input class="form-control" type="text" name="field-name" placeholder="joaquin lopes ....">
                         </div>
                         <div class="row">
                             <div class="form-group  col-md-6">
                                 <label for="inputEmail4">RG</label>
-                                <input class="form-control" type="text"  data-mask="0000-0000" required="required" name="numbers" pattern="[0-9]+$" placeholder="Apenas numeros" id="inputEmail4">
+                                <input class="form-control rg" type="text" required="required" name="rg" pattern="[0-9]+$" placeholder="9.858.659" id="inputEmail4">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">CPF</label>
-                                <input type="text" required="required"  name="numbers" pattern="[0-9]+$" class="form-control" placeholder="Apenas numeros" id="inputPassword4">
+                                <input type="text" required="required" name="cpf" pattern="[0-9]+$" class="form-control cpf" placeholder="133.151.154-56" id="inputPassword4">
                             </div>
-                            
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="inputState">Medicos</label>
-                            <select id="inputState" class="form-control">
-                                <option selected>Choose...</option>
-                                <option>...</option>
-                                <option>...</option>
-                                <option>...</option>
-                            </select>
-                        </div>
 
+                        </div>
+                        <div class="row">
+                            <div class="form-group   col-md-6">
+                                <label for="inputState">Médicos</label>
+
+                                <select id="inputState" class="form-control">
+                                    <option selected>Escolha</option>
+                                    <option>...</option>
+                                    <option>...</option>
+                                    <option>...</option>
+
+                                </select>
+                            </div>
+                            <div class="form-group   col-md-6">
+                                <label for="inputState">Data</label>
+
+                                <select id="inputState" class="form-control">
+                                    <option selected>Data</option>
+                                    <option>...</option>
+                                    <option>...</option>
+                                    <option>...</option>
+
+                                </select>
+                            </div>
+                        </div>
 
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary btn-lg btn-block"> Enviar<span class="icon-cheveron-right"></span> </button>
+                            <button type="submit" class="btn btn-info btn-lg btn-block"> Marcar<span class="icon-cheveron-right"></span> </button>
                         </div>
                     </form>
                 </div>

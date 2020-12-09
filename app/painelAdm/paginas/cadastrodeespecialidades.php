@@ -3,14 +3,18 @@
     <div class="content-header  ">
         <div class="container-fluid ">
             <div class="row mb-2">
-
+                
                 <div class="col-8 offset-2">
-                    <h1 class="m-0 mb-3 ">Cadastro De Especialidade</h1>
 
+
+
+                    <div class="text-center">
+                        <img src="app\painelAdm\dist\img\undraw_medicine_b1ol__2_-removebg-preview.png" class="w-50" alt="">
+                    </div>
                     <form action="">
                         <div class="form-group text-center col-md-12">
 
-                            <input class="form-control" type="text" autofocus placeholder="Escreva a Especialidade!">
+                            <input class="form-control" type="text" autofocus placeholder="Digite a Especialidade!">
 
                         </div>
                         <div class="class text-center">
@@ -24,9 +28,9 @@
 
 
         </div>
-       
+
     </div>
-   
+
 
 
 </div>

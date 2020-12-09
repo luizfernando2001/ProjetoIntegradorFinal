@@ -1,183 +1,260 @@
 <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <div class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-
-                    <!-- <script type="text/tmpl" id="tmpl">
-  {{ 
-  var date = date || new Date(),
-      month = date.getMonth(), 
-      year = date.getFullYear(), 
-      first = new Date(year, month, 1), 
-      last = new Date(year, month + 1, 0),
-      startingDay = first.getDay(), 
-      thedate = new Date(year, month, 1 - startingDay),
-      dayclass = lastmonthcss,
-      today = new Date(),
-      i, j; 
-  if (mode === 'week') {
-    thedate = new Date(date);
-    thedate.setDate(date.getDate() - date.getDay());
-    first = new Date(thedate);
-    last = new Date(thedate);
-    last.setDate(last.getDate()+6);
-  } else if (mode === 'day') {
-    thedate = new Date(date);
-    first = new Date(thedate);
-    last = new Date(thedate);
-    last.setDate(thedate.getDate() + 1);
-  }
-  
-  }}
-  <table class="calendar-table table table-condensed table-tight">
-    <thead>
-      <tr>
-        <td colspan="7" style="text-align: center">
-          <table style="white-space: nowrap; width: 100%">
-            <tr>
-              <td style="text-align: left;">
-                <span class="btn-group">
-                  <button class="js-cal-prev btn btn-default">&lt;</button>
-                  <button class="js-cal-next btn btn-default">&gt;</button>
-                </span>
-                <button class="js-cal-option btn btn-default {{: first.toDateInt() <= today.toDateInt() && today.toDateInt() <= last.toDateInt() ? 'active':'' }}" data-date="{{: today.toISOString()}}" data-mode="month">{{: todayname }}</button>
-              </td>
-              <td>
-                <span class="btn-group btn-group-lg">
-                  {{ if (mode !== 'day') { }}
-                    {{ if (mode === 'month') { }}<button class="js-cal-option btn btn-link" data-mode="year">{{: months[month] }}</button>{{ } }}
-                    {{ if (mode ==='week') { }}
-                      <button class="btn btn-link disabled">{{: shortMonths[first.getMonth()] }} {{: first.getDate() }} - {{: shortMonths[last.getMonth()] }} {{: last.getDate() }}</button>
-                    {{ } }}
-                    <button class="js-cal-years btn btn-link">{{: year}}</button> 
-                  {{ } else { }}
-                    <button class="btn btn-link disabled">{{: date.toDateString() }}</button> 
-                  {{ } }}
-                </span>
-              </td>
-              <td style="text-align: right">
-                <span class="btn-group">
-                  <button class="js-cal-option btn btn-default {{: mode==='year'? 'active':'' }}" data-mode="year">Year</button>
-                  <button class="js-cal-option btn btn-default {{: mode==='month'? 'active':'' }}" data-mode="month">Month</button>
-                  <button class="js-cal-option btn btn-default {{: mode==='week'? 'active':'' }}" data-mode="week">Week</button>
-                  <button class="js-cal-option btn btn-default {{: mode==='day'? 'active':'' }}" data-mode="day">Day</button>
-                </span>
-              </td>
-            </tr>
-          </table>
-          
-        </td>
-      </tr>
-    </thead>
-    {{ if (mode ==='year') {
-      month = 0;
-    }}
-    <tbody>
-      {{ for (j = 0; j < 3; j++) { }}
-      <tr>
-        {{ for (i = 0; i < 4; i++) { }}
-        <td class="calendar-month month-{{:month}} js-cal-option" data-date="{{: new Date(year, month, 1).toISOString() }}" data-mode="month">
-          {{: months[month] }}
-          {{ month++;}}
-        </td>
-        {{ } }}
-      </tr>
-      {{ } }}
-    </tbody>
-    {{ } }}
-    {{ if (mode ==='month' || mode ==='week') { }}
-    <thead>
-      <tr class="c-weeks">
-        {{ for (i = 0; i < 7; i++) { }}
-          <th class="c-name">
-            {{: days[i] }}
-          </th>
-        {{ } }}
-      </tr>
-    </thead>
-    <tbody>
-      {{ for (j = 0; j < 6 && (j < 1 || mode === 'month'); j++) { }}
-      <tr>
-        {{ for (i = 0; i < 7; i++) { }}
-        {{ if (thedate > last) { dayclass = nextmonthcss; } else if (thedate >= first) { dayclass = thismonthcss; } }}
-        <td class="calendar-day {{: dayclass }} {{: thedate.toDateCssClass() }} {{: date.toDateCssClass() === thedate.toDateCssClass() ? 'selected':'' }} {{: daycss[i] }} js-cal-option" data-date="{{: thedate.toISOString() }}">
-          <div class="date">{{: thedate.getDate() }}</div>
-          {{ thedate.setDate(thedate.getDate() + 1);}}
-        </td>
-        {{ } }}
-      </tr>
-      {{ } }}
-    </tbody>
-    {{ } }}
-    {{ if (mode ==='day') { }}
-    <tbody>
-      <tr>
-        <td colspan="7">
-          <table class="table table-striped table-condensed table-tight-vert" >
-            <thead>
-              <tr>
-                <th>&nbsp;</th>
-                <th style="text-align: center; width: 100%">{{: days[date.getDay()] }}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th class="timetitle" >All Day</th>
-                <td class="{{: date.toDateCssClass() }}">  </td>
-              </tr>
-              <tr>
-                <th class="timetitle" >Before 6 AM</th>
-                <td class="time-0-0"> </td>
-              </tr>
-              {{for (i = 6; i < 22; i++) { }}
-              <tr>
-                <th class="timetitle" >{{: i <= 12 ? i : i - 12 }} {{: i < 12 ? "AM" : "PM"}}</th>
-                <td class="time-{{: i}}-0"> </td>
-              </tr>
-              <tr>
-                <th class="timetitle" >{{: i <= 12 ? i : i - 12 }}:30 {{: i < 12 ? "AM" : "PM"}}</th>
-                <td class="time-{{: i}}-30"> </td>
-              </tr>
-              {{ } }}
-              <tr>
-                <th class="timetitle" >After 10 PM</th>
-                <td class="time-22-0"> </td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-    {{ } }}
-  </table>
-</script>
- -->
-
-
-                        <div class="col-sm-6">
-                         
-
-                        </div>
-                    </div>
-    
-                </div>
-                <!-- /.container-fluid -->
-            </div>
-            <!-- /parte do meio -->
-
-            <div class="container theme-showcase">
-  <h1>Calendar</h1>
-<div id="holder" class="row" ></div>
-</div>
-
-
-
-
-</div>
-
-</div>
-            
+  <!--  Pode tirar prem nao aconcelho -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+         
         </div>
-        <!-- /.final meio -->
+      </div>
+
       
+   
+<!-- calendario -->
+
+<link rel="stylesheet" href="app/paineladm/plugins/fullcalendar/main.css">
+
+<body>
+  <div class="wrapper">
+
+    </aside>
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- NAo pode tirar isso chamada do calendario -->
+      <div id="external-events"> </div>
+
+  </div>
+  <!-- /.col -->
+  <!-- <div class="col-md-9"> calendario tamanho   -->
+    <div class="card card-primary">
+      <div class="card-body p-0">
+        <!-- THE CALENDAR -->
+        <div id="calendar"></div>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+  </div>
+  <!-- /.col -->
+  </div>
+  <!-- /.row -->
+  </div><!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
+  </div>
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- jQuery -->
+  <script src="app/paineladm/plugins/jquery/jquery.min.js"></script>
+ 
+  <!-- fullCalendar 2.2.5 -->
+  <script src="app/paineladm/plugins/moment/moment.min.js"></script>
+  <script src="app/paineladm/plugins/fullcalendar/main.js"></script>
+ 
+  <script>
+    $(function() {
+
+      /* initialize the external events
+       -----------------------------------------------------------------*/
+      function ini_events(ele) {
+        ele.each(function() {
+
+          // create an Event Object (https://fullcalendar.io/docs/event-object)
+          // it doesn't need to have a start or end
+          var eventObject = {
+            title: $.trim($(this).text()) // use the element's text as the event title
+          }
+
+          // store the Event Object in the DOM element so we can get to it later
+          $(this).data('eventObject', eventObject)
+
+          // make the event draggable using jQuery UI
+          $(this).draggable({
+            zIndex: 1070,
+            revert: true, // will cause the event to go back to its
+            revertDuration: 0 //  original position after the drag
+          })
+
+        })
+      }
+
+      ini_events($('#external-events div.external-event'))
+
+      /* initialize the calendar
+       -----------------------------------------------------------------*/
+      //Date for the calendar events (dummy data)
+      var date = new Date()
+      var d = date.getDate(),
+        m = date.getMonth(),
+        y = date.getFullYear()
+
+      var Calendar = FullCalendar.Calendar;
+      var Draggable = FullCalendar.Draggable;
+
+      var containerEl = document.getElementById('external-events');
+      var checkbox = document.getElementById('drop-remove');
+      var calendarEl = document.getElementById('calendar');
+
+      // initialize the external events
+      // -----------------------------------------------------------------
+
+      new Draggable(containerEl, {
+        itemSelector: '.external-event',
+        eventData: function(eventEl) {
+          return {
+            title: eventEl.innerText,
+            backgroundColor: window.getComputedStyle(eventEl, null).getPropertyValue('background-color'),
+            borderColor: window.getComputedStyle(eventEl, null).getPropertyValue('background-color'),
+            textColor: window.getComputedStyle(eventEl, null).getPropertyValue('color'),
+          };
+        }
+      });
+
+      var calendar = new Calendar(calendarEl, {
+        headerToolbar: {
+          left: 'prev,next',
+          center: 'title',
+          right: ''
+          // dayGridMonth,timeGridWeek,timeGridDay
+        },
+        themeSystem: 'bootstrap',
+        //Random default events
+        events: [{
+            title: 'All Day Event',
+            start: new Date(y, m, 1),
+            backgroundColor: '#f56954', //red
+            borderColor: '#f56954', //red
+            allDay: true
+          },
+          {
+            title: 'Long Event',
+            start: new Date(y, m, d - 5),
+            end: new Date(y, m, d - 2),
+            backgroundColor: '#f39c12', //yellow
+            borderColor: '#f39c12' //yellow
+          },
+          {
+            title: 'Meeting',
+            start: new Date(y, m, d, 10, 30),
+            allDay: false,
+            backgroundColor: '#0073b7', //Blue
+            borderColor: '#0073b7' //Blue
+          },
+          {
+            title: 'Lunch',
+            start: new Date(y, m, d, 12, 0),
+            end: new Date(y, m, d, 14, 0),
+            allDay: false,
+            backgroundColor: '#00c0ef', //Info (aqua)
+            borderColor: '#00c0ef' //Info (aqua)
+          },
+          {
+            title: 'Birthday Party',
+            start: new Date(y, m, d + 1, 19, 0),
+            end: new Date(y, m, d + 1, 22, 30),
+            allDay: false,
+            backgroundColor: '#00a65a', //Success (green)
+            borderColor: '#00a65a' //Success (green)
+          },
+          {
+            title: 'Click for Google',
+            start: new Date(y, m, 28),
+            end: new Date(y, m, 29),
+            url: 'https://www.google.com/',
+            backgroundColor: '#3c8dbc', //Primary (light-blue)
+            borderColor: '#3c8dbc' //Primary (light-blue)
+          }
+        ],
+        editable: true,
+        droppable: true, // this allows things to be dropped onto the calendar !!!
+        drop: function(info) {
+          // is the "remove after drop" checkbox checked?
+          if (checkbox.checked) {
+            // if so, remove the element from the "Draggable Events" list
+            info.draggedEl.parentNode.removeChild(info.draggedEl);
+          }
+        }
+      });
+
+      calendar.render();
+      // $('#calendar').fullCalendar()
+
+      /* ADDING EVENTS */
+      var currColor = '#3c8dbc' //Red by default
+      // Color chooser button
+      $('#color-chooser > li > a').click(function(e) {
+        e.preventDefault()
+        // Save color
+        currColor = $(this).css('color')
+        // Add color effect to button
+        $('#add-new-event').css({
+          'background-color': currColor,
+          'border-color': currColor
+        })
+      })
+      $('#add-new-event').click(function(e) {
+        e.preventDefault()
+        // Get value and make sure it is not null
+        var val = $('#new-event').val()
+        if (val.length == 0) {
+          return
+        }
+
+        // Create events
+        var event = $('<div />')
+        event.css({
+          'background-color': currColor,
+          'border-color': currColor,
+          'color': '#fff'
+        }).addClass('external-event')
+        event.text(val)
+        $('#external-events').prepend(event)
+
+        // Add draggable funtionality
+        ini_events(event)
+
+        // Remove event from text input
+        $('#new-event').val('')
+      })
+    })
+  </script>
+</body>
+
+</html>
+
+    </div>
+  </div>
+  <!-- /.container-fluid -->
+</div>
+<!-- /parte do meio -->
+
+
+
+</div>
+<!-- /.fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
