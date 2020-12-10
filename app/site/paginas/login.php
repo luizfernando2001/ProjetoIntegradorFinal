@@ -50,7 +50,9 @@
             </div>
           </div>
           <div class="social-auth-links text-center mb-3">
-            <button type="submit" class="btn btn-block btn-primary mb-2"><strong>Entrar</strong></button>            
+          
+              <button type="submit" class="btn btn-block btn-primary mb-2"><strong>Entrar</strong></button>            
+          
             <a href="index.php?pg=inicial" class="btn btn-block btn-warning">Voltar</a>
           </div>
         </form>
