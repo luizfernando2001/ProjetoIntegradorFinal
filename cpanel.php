@@ -21,7 +21,7 @@ if ($cpanel) {
 
 
         case 'login':
-            include_once "app/site/login.php";
+            include_once "app/site/paginas/login.php";
             break;
 
         case 'agenda':
