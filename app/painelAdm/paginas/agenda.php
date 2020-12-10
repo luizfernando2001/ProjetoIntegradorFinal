@@ -125,13 +125,15 @@
         },
         themeSystem: 'bootstrap',
         //Random default events
+        
         events: [{
             title: 'All Day Event',
-            start: new Date(y, m, 1),
+            start: new Date(y, 3, 2),
             backgroundColor: '#f56954', //red
             borderColor: '#f56954', //red
             allDay: true
           },
+
           {
             title: 'Long Event',
             start: new Date(y, m, d - 5),
