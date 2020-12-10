@@ -66,14 +66,11 @@
 <script src="app/assets/js/jquery.js"></script>
 
 <!-- Bootstrap -->
-<script src="app/assets/js/bootstrap.min.js"></script>
+<script src="app/assets/js/bootstrap.js"></script>
+
 
 <!-- Meu Javascript -->
 <script src="app/assets/js/projetofinal.js"></script>
-
-
-<!-- Css -->
-<script src="app/assets/css/projetofinalcss.css"></script>
 
 
 
