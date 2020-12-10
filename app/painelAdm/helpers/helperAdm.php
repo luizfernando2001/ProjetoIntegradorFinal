@@ -38,30 +38,71 @@ function verificaSeLogado()
 }
 
 
-function inserirUsuario()
+function inserirprofi()
 {
 
-    //Pegando as variáveis via post
-    $nome = trim($_POST['nome']);
-    $senha = trim($_POST['senha']);
+    if ($_POST) {
 
-    //movendo imagens para a pasta app/painelAdm/assets/img
-    move_uploaded_file($_FILES['img_usuario']['tmp_name'], 'app/painelAdm/assets/img/' . $_FILES['img_usuario']['name']);
+        //Pegando as variáveis via post
+        $medico = trim($_POST['nomemedico']);
+        $rg = trim($_POST['rg']);
+        $cpf = trim($_POST['cpf']);
+        //Validar as variáveis e encriptar a senha
+        $parametros = array(
 
-    //Validar as variáveis e encriptar a senha
-    $parametros = array(
-        ':nome' => $nome,
-        ':senha' => password_hash($senha, PASSWORD_DEFAULT),
-        ':img_usuario' => ($_FILES['img_usuario']['name'] == true) ? 'app/painelAdm/assets/img/' . $_FILES['img_usuario']['name']
-            : 'app/cpanel/assets/img/anonimo.png'
-    );
+            ':nomemedico' => $medico,
+            ':rg' => $rg,
+            ':cpf' => $cpf
+        );
 
-    $resultDados = new Conexao();
-    $resultDados->intervencaoNoBanco('INSERT INTO usuarios(nome, senha, img) VALUES (:nome,:senha, :img_usuario)', $parametros);
+        $resultDados = new Conexao();
+        $resultDados->intervencaoNoBanco('INSERT INTO profissionais(nomemedico, rg, cpf) 
+    VALUES (:nomemedico, :rg, :cpf)', $parametros);
 
-    //incluir a pagina que será exibida após cadastrar um usuario aqui:
-    include_once "app/painelAdm/paginas/usuarios-listar.php";
+        //incluir a pagina que será exibida após cadastrar um usuario aqui:
+       
+        include_once "app/painelAdm/paginas/profissionais.php";
+
+    } else {
+        include_once "app/painelAdm/paginas/cadastrodemedicos.php"; 
+        // header("Location: ?pg=profissionais");
+    }
 }
+
+function inserirpaciente()
+{
+
+    if ($_POST) {
+
+        //Pegando as variáveis via post
+        $nome = trim($_POST['nome']);
+        $rg = trim($_POST['rg']);
+        $cpf = trim($_POST['cpf']);
+        //Validar as variáveis e encriptar a senha
+        $parametros = array(
+
+            ':nome' => $nome,
+            ':rg' => $rg,
+            ':cpf' => $cpf
+        );
+
+        $resultDados = new Conexao();
+        $resultDados->intervencaoNoBanco('INSERT INTO pacientes(nome, rg, cpf) 
+    VALUES (:nome, :rg, :cpf)', $parametros);
+
+        //incluir a pagina que será exibida após cadastrar um usuario aqui:
+       
+        include_once "app/painelAdm/paginas/pacientes.php";
+
+    } else {
+        include_once "app/painelAdm/paginas/marcarconsulta.php"; 
+        // header("Location: ?pg=profissionais");
+    }
+}
+
+
+
+
 
 function inserirProduto()
 {
