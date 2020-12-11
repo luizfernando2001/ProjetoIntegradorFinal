@@ -8,16 +8,11 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="app/painelAdm/index3.php" class="nav-link">inicial</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contato</a>
-      </li>
+     
     </ul>
 
     <!-- formulario de pesquisa topo -->
-    <form class="form-inline ml-3">
+    <!-- <form class="form-inline ml-3">
       <div class="input-group input-group-sm">
         <input class="form-control form-control-navbar" type="search" placeholder="pesquisar" aria-label="Search">
         <div class="input-group-append">
@@ -26,13 +21,13 @@
           </button>
         </div>
       </div>
-    </form>
+    </form> -->
 
     <!-- mantem tudo no lugar -->
     <ul class="navbar-nav ml-auto">
 
-       
-<!-- icones da navbar topo -->
+
+      <!-- icones da navbar topo -->
 
       </li>
       <li class="nav-item">
@@ -40,6 +35,11 @@
           <i class="fas fa-expand-arrows-alt"></i>
         </a>
       </li>
+      <li class="nav-item">
+                  <a class="nav-link"  href="cpanel.php?pg=sair" >
+                      <i class="fas fa-arrow-left"></i>
+                  </a>
+              </li>
 
     </ul>
   </nav>
@@ -79,44 +79,40 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item">
+          <li class="nav-item    <?php echo (($_GET['pg'] == 'agenda') ? 'bg-primary' : ''); ?>">
             <a href="?pg=agenda" class="nav-link">
               <i class="far icon-contacts nav-icon"></i>
               <p>Agenda</p>
             </a>
           </li>
-          <li class="nav-item">
+          
+          <li class="nav-item   <?php echo (($_GET['pg'] == 'pacientes') ? 'bg-primary' : ''); ?> ">
             <a href="?pg=pacientes" class="nav-link">
               <i class="far icon-person_add_alt_1 nav-icon"></i>
               <p>Pacientes</p>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item   <?php echo (($_GET['pg'] == 'profissionais') ? 'bg-primary' : ''); ?>  ">
             <a href="?pg=profissionais" class="nav-link">
               <i class="far icon-groups nav-icon"></i>
               <p>Profissionais</p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="?pg=marcarconsulta" class="nav-link">
-              <i class="far icon-profile nav-icon"></i>
-              <p>Marca Consulta</p>
-            </a>
-          </li>
+
           
-          <li class="nav-item">
-            <a href="?pg=cadastrodemedicos" class="nav-link">
-              <i class="far icon-user nav-icon"></i>
-              <p>Cadastro de Medicos</p>
-            </a>
-          </li>
-          <li class="nav-item">
+          <li class="nav-item  <?php echo (($_GET['pg'] == 'cadastrodeespecialidades') ? 'bg-primary' : ''); ?>  ">
             <a href="?pg=cadastrodeespecialidades" class="nav-link">
               <i class="far icon-user nav-icon"></i>
-              <p>Cadastra especialidades</p>
+              <p>Cadastro de especialidades</p>
             </a>
           </li>
-          
+          <li class="nav-item  <?php echo (($_GET['pg'] == 'planodesaude') ? 'bg-primary' : ''); ?>  ">
+            <a href="?pg=planodesaude" class="nav-link">
+              <i class="far icon-user nav-icon"></i>
+              <p>Planos de Saude</p>
+            </a>
+          </li>
+
 
 
 
